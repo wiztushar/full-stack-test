@@ -5,6 +5,9 @@ const { todo } =require('./db');
 const app=express();
 
 app.use(express.json());
+app.get('/',function(req,res){
+    res.send('Hit this endpoint-> /todos to see existing data in Db  ')
+})
 
 //fetch  all todo from db
 app.get('/todos',async function(req,res){
